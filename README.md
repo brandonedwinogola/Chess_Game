@@ -21,7 +21,7 @@ python3 ChessGame.py
 
 ## 📺 Demo
 <p align="center">
-<img src="https://github.com/userabhibhullar/python-mini-project/blob/main/IMG/chess.jpg" width=70% height=70%>![alt text]
+<img src="https://github.com/userabhibhullar/python-mini-project/blob/main/IMG/chess.jpg" width=70% height=70%>
 
 ## *Author Name*
 [Your Name](https://github.com/yourusername)
