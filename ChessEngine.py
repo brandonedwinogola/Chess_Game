@@ -1,11 +1,8 @@
-class GameState:
 
-    def __init__(self):
-        # 8x8 2d list, each element has 2 characters
-        # The first character represents the color of the piece, 'b' or 'w'
-        # The second character represents the type of the piece, 'K', 'Q', 'R', 'B', 'N', or 'P'
-        # "--" represents an empty space with no piece
-         self.board = [
+class GameState: 
+        
+        def __init__(self):
+                self.board = [
                         ["bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR"],
                         ["bp", "bp", "bp", "bp", "bp", "bp", "bp", "bp"],
                         ["--", "--", "--", "--", "--", "--", "--", "--"],
@@ -22,8 +19,8 @@ class GameState:
                 self.blackKingLocation = (0, 4)
                 self.checkMate = False
                 self.staleMate = False
-         
-    def makeMove(self, move):
+
+        def makeMove(self, move):
                 self.board[move.startRow][move.startCol] = "--"
                 self.board[move.endRow][move.endCol] = move.pieceMoved
                 self.moveLog.append(move)
@@ -36,7 +33,8 @@ class GameState:
                 if move.isPawnPromotion:
                         self.board[move.endRow][move.endCol] = move.pieceMoved[0] + "Q"
 
-     def undoMove(self):
+
+        def undoMove(self):
                 if len(self.moveLog) != 0:
                         move = self.moveLog.pop()
                         self.board[move.startRow][move.startCol] = move.pieceMoved
@@ -221,3 +219,5 @@ class Move():
 
         def getRankFile(self, r, c):
                 return  self.colsToFiles[c] + self.rowsToRanks[r]
+
+
